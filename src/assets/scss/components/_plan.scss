@@ -102,6 +102,33 @@
 
 		}
 	}
+	@include desktop {
+		main {
+			box-shadow: none;
+			.parent-container {
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 2rem;
+				margin-top: 1rem;
+				.plan {
+					width: 30%;
+					flex-flow: column nowrap;
+					object {
+						margin-right: 0;
+						margin-bottom: 2rem;
+					}
+				}
+				.Pro {
+					margin-bottom: 0;
+					margin-right: 0;
+				}
+			}
+		}
+
+
+	}
 
 }
 

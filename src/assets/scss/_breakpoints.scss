@@ -11,7 +11,7 @@ $breakpoints : (
 	 }
  }
 
- @mixin laptop {
+ @mixin desktop {
 	 @media (min-width: map.get($breakpoints,"md")){
 		 @content;
 	 }

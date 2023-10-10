@@ -1,0 +1,23 @@
+
+
+
+
+#container {
+	//border: 1px solid red;
+
+	width: 100vw;
+	position: relative;
+	@include desktop {
+		border: 2px solid $alabaster;
+		display: flex;
+		padding:1rem  1.5rem;
+		background-color: $alabaster;
+		height: 32vh;
+		border-radius: 10px;
+		flex-shrink: 0;
+		max-width: 900px;
+
+
+	}
+
+}

@@ -2,6 +2,8 @@ import {useContext} from "react";
 import {currentFormContext} from "../context/CurrentFormContext.jsx";
 
 const steps = ["YOUR INFO","SELECT PLAN","ADD-ONS","SUMMARY"];
+console.log(window.innerHeight);
+console.log(window.innerWidth);
 
 
 export default function Stepper(){

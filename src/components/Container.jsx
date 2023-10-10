@@ -5,7 +5,7 @@ export default function Container(){
 	 
 
 	return (
-		<div id="Container" style={{position: "relative"}}>
+		<div id="container" >
 		 <Stepper />
 		 <FormContainer />
 

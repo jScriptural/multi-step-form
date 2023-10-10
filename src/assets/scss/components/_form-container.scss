@@ -1,11 +1,21 @@
 
 
 #formContainer {
-	//border: 1px solid green;
+	//border: 1px solid blue;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
+	
 	position: absolute;
 	top: 11vh;
 	height: 89vh;
+	@include desktop {
+		position: initial;
+		height: 100%;
+		justify-content: space-between;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
 }

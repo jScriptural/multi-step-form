@@ -18,7 +18,7 @@
 		padding: 1rem 0;
 		li {
 			//border: 1px solid green;
-			&:not(li:last-child){
+			&:not(:last-child){
 				margin-right: 1rem;
 			}
 			.step {
@@ -40,14 +40,69 @@
 			@include mobile {
 				.headings {
 					display: none;
-
 				}
-
-	}
+			}
 		}
 
 
 	}
+	@include desktop {
+		height: 100%;
+		background-image: url("/images/bg-sidebar-desktop.svg");
+		background-size: cover;
+		background-position: 0 -80px;
+		//border: 1px solid red;
+		border-radius: 10px;
+		flex-shrink: 0;
+		padding: 2rem 1rem;
+		width: 35%;
+		ul {
+			flex-flow: column nowrap;
+			align-items: flex-start;
+			
+
+			li {
+				display: flex;
+				align-items: center;
+				margin-top: 1rem;
+				&:first-child {
+					margin-top:0;
+				}
+
+
+				/*&:not(:last-child){
+					margin-right: 0;
+				}*/
+
+				.step {
+					margin-right: 1rem;
+				}
+				 .headings {
+					 display: flex;
+					 flex-flow: column nowrap;
+					 .sub-heading {
+						 color: $light-gray;
+					 }
+					 .heading {
+						 color: $alabaster;
+						 font-weight: 700;
+					 }
+
+
+
+				 }
+
+			}
+			
+
+
+		}
+
+
+		
+	}
+
+
 
 }
 

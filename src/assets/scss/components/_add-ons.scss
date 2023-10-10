@@ -66,6 +66,20 @@
 
 
 	}
+	@include desktop {
+		padding: 1.5rem;
+		form {
+			box-shadow: none;
+			p {
+				margin-bottom:2rem;
+				margin-top: 0;
+			}
+			.add-on {
+				margin-top: 1.4rem;
+			}
+		}
+
+	}
 
 }
 .selected-add-on{
