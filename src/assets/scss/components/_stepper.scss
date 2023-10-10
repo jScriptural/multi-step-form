@@ -1,0 +1,60 @@
+
+
+
+#stepperSection {
+	//border: 5px dotted red;
+	height: 24vh;
+	background-image: url(/images/bg-sidebar-mobile.svg);
+	background-attachment: scroll;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+	ul {
+		//border: 1px solid blue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		padding: 1rem 0;
+		li {
+			//border: 1px solid green;
+			&:not(li:last-child){
+				margin-right: 1rem;
+			}
+			.step {
+				border: 1.5px solid $white;
+				border-radius: 50%;
+				width: 2rem;
+				height: 2rem;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: $alabaster;
+				font: {
+					size:.85rem;
+					weight: 700;
+				}
+				
+			}
+			@include mobile {
+				.headings {
+					display: none;
+
+				}
+
+	}
+		}
+
+
+	}
+
+}
+
+.active {
+	color: $marine-blue !important;
+	background-color: $light-blue;
+	border: 1.5px solid $light-blue !important;
+
+
+ }

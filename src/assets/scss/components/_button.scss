@@ -1,0 +1,32 @@
+
+#buttons {
+	border: 1px solid $alabaster;
+	background-color: $alabaster;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:1.5rem 1rem;
+	button:hover{ 
+		cursor: pointer;
+	}
+	.prev-btn {
+		padding: .6rem;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		text-align: center;
+		color: $cool-gray;
+		font-weight: 500;
+
+	}
+	.next-btn {
+		padding: .6rem 1.2rem;
+		text-align: center;
+		color: $alabaster;
+		font-weight: 500;
+		border: 1px solid $marine-blue;
+		border-radius: 5px;
+
+	}
+}
+

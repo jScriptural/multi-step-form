@@ -1,0 +1,51 @@
+@import "colors";
+:root {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: ubuntu,courier,monospace, Inter ,system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height:1.5 ;
+
+
+/*  color-scheme: light dark;*/
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+*,*::before,*::after {
+	box-sizing:inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+img {
+	width: 100%;
+}
+body {
+	min-width: 100vw;
+	min-height: 100vh;
+	position: relative;
+        background-color: $magnolia ;
+}
+
+@import "breakpoints";
+@import "components/stepper";
+@import "components/personal-info";
+@import "components/plan";
+@import "components/add-ons";
+@import "components/summary";
+@import "components/button";
+@import "components/success-feedback";
+@import "components/form-container";
+
+
+

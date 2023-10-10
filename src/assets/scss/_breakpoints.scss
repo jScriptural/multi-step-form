@@ -1,0 +1,19 @@
+@use "sass:map";
+
+$breakpoints : (
+ "sm": 100px,
+ "md": 768px,
+ );
+
+ @mixin mobile {
+	 @media (min-width: map.get($breakpoints,"sm")){
+		 @content;
+	 }
+ }
+
+ @mixin laptop {
+	 @media (min-width: map.get($breakpoints,"md")){
+		 @content;
+	 }
+ }
+

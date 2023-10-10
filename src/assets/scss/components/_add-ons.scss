@@ -1,0 +1,74 @@
+
+
+#addOns {
+	//border: 1px solid red;
+	padding: 1rem;
+	form {
+		background-color: $alabaster;
+		padding: 1rem;
+		border: 1px solid $alabaster;
+		box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+		border-radius: 10px;
+		legend	 {
+                        margin-top: 1rem;
+                        color: $marine-blue;
+                        font: {
+                                weight: 700;
+                                size: 1.5rem;
+                        }
+                }
+		p {
+			color: $cool-gray;
+			margin-top: 1rem;
+		}
+		.add-on {
+			display: flex;
+			margin-top: 1rem;
+			justify-content: flex-start;
+			align-items: center;
+			padding: .8rem;
+			border: 1px solid $light-gray;
+			border-radius: 10px;
+			&:hover {
+				cursor: pointer;
+			}
+			input {
+				margin-right: 1rem;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			div {
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				//border: 1px solid green;
+				.package {
+					color: $marine-blue;
+					font-weight: 700;
+
+				}
+				.description {
+					color: $cool-gray;
+					font-size: .8rem;
+					font-weight: 300;
+				}
+
+			}	
+			.bill {
+				margin-left: auto;
+			}
+
+		}
+		.Customizable {
+			margin-bottom: 1rem;
+		}
+
+
+	}
+
+}
+.selected-add-on{
+	border: 1px solid $purplish-blue !important;
+	background-color: $magnolia;
+}
