@@ -47,11 +47,11 @@
 
 	}
 	@include desktop {
-		height: 100%;
+		height: auto;
 		background-image: url("/images/bg-sidebar-desktop.svg");
 		background-size: cover;
-		//background-position: 0 -80px;
-		//border: 1px solid red;
+		background-position: center;	
+                border: 1px solid red;
 		border-radius: 10px;
 		flex-shrink: 0;
 		padding: 2rem 1rem;

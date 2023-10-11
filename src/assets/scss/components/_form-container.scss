@@ -11,7 +11,7 @@
 	height: 89vh;
 	@include desktop {
 		position: initial;
-		height: 100%;
+		height: auto;
 		justify-content: space-between;
 		margin-left: auto;
 		margin-right: auto;
