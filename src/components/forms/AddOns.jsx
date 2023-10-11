@@ -35,15 +35,20 @@ export default function AddOns(){
 	const step = useContext(currentFormContext);
 	const formData = useContext(formDataContext);
 	const [selectedAddOns, setSelectedAddOns] = useState({});
+	/** joke **/
+	/*Q: What does a programming language have in common 
+	 * with a mathematics
+	 * A: Functions
+	 */
 
         function handleClick(e){
 		const target = e.target;
 		if(formData && target.tagName==="INPUT"){
 			const checked = target.checked;
 			const addOn = target.closest(".add-on");
-			addOn.classList.toggle("selected-add-on");
-			let regexp = /(?<pack>^[A-Z]\w+\s\w+)(?=[A-Z]).*?(?<bill>\+.*)/;
+			const regexp = /(?<pack>^[A-Z]\w+\s\w+)(?=[A-Z]).*?(?<bill>\+.*)/;
 			const group= addOn.textContent.match(regexp).groups;
+			addOn.classList.toggle("selected-add-on");
 			if(checked){
 				setSelectedAddOns({...selectedAddOns, [addOn.dataset.id]: group});
 
@@ -52,27 +57,26 @@ export default function AddOns(){
 
 				setSelectedAddOns({...selectedAddOns});
 			}
-		
-
 		}
-
-		
-
 	}
+	
 	useEffect(()=>{
 			formData.setData({...formData.data,addons:selectedAddOns});
-	},[selectedAddOns])
+	},[selectedAddOns]);
 
 	return (
-		<div id="addOns" hidden={step.currentStep !== 3} >
+		<div id="addOns" hidden={step.currentStep !== 3} role="region">
 		  <form> 
 		   <legend>Pick add-ons</legend>
 		   <p>Add-ons help enhance your gaming experience.</p>
-		{addOns.map((addOn,i)=>(<div key={i} className={`add-on ${addOn.package}`} data-id={"addOn"+i} onClick={handleClick}>
-			<input type="checkbox" name="addOns"  /><div><span className="package">{addOn.package}</span><span className="description">{addOn.description}</span></div><span className="bill">{formData.data.plan?.type=="yearly"?addOn.bill.yearly:addOn.bill.monthly}</span></div>))}
-		   
-		 </form>
-		   
+		{addOns.map((addOn,i)=>(
+		    <div role="container" key={i} className={`add-on ${addOn.package}`} data-id={"addOn"+i} onClick={handleClick}>
+			<input type="checkbox" name="addOns"  />
+			<div role="container"><span className="package">{addOn.package}</span><span className="description">{addOn.description}</span></div>
+			<span className="bill">{formData.data.plan?.type=="yearly"?addOn.bill.yearly:addOn.bill.monthly}</span>
+		</div>
+		))}   
+		 </form>   
 		</div>
 	);
 }

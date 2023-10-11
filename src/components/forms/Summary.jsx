@@ -8,47 +8,40 @@ function extractBills(obj){
 		if(typeof obj[key] === "object"){
 			if("bill" in obj[key]){
 				billings.push(obj[key].bill.match(/\d+/)[0]);
-			
-
 			}else {
 				billings.push(...extractBills(obj[key]));
 			}
-				
 		}
 	}
 	return billings;
-
-
-
 };
 
 
 export default function Summary(){
 	const step = useContext(currentFormContext);
 	const formData = useContext(formDataContext);
-	//console.log("data",formData.data);
 
 	return (
-		<div id="summary" hidden={step.currentStep !== 4}>
+		<section id="summary" hidden={step.currentStep !== 4}>
 		 <main> 
 		    <h1>Finishing up</h1>
 		     <p>Double-check everything looks OK before confirming </p>
 		     <section>
-		        <div className="plan">
+		        <div role="container" className="plan">
 		             <div><span className="pack">{formData.data?.plan?.pack+"("+formData.data?.plan?.type+")"}</span><span className="link" onClick={(e)=>step.setCurrentStep(2)}> change</span></div>
 		                <span className="bill">{formData.data?.plan?.bill}</span>
 		        </div>
 		 <hr/>
-		        <div className="add-ons">
+		        <div role="container" className="add-ons">
 		          {formData.data.addons && Object.values(formData.data.addons).map((addon,i)=>(<div className="addon" key={i}><span className="pack">{addon?.pack}</span><span className="bill">{addon?.bill}</span></div>))}
 		        </div>
 		     </section>
-		        <div className="total">
+		        <div role="container" className="total">
 		           <span className="text">{`Total (per ${formData.data?.plan?.type?.slice(0,-2)})`}</span><span className="bill">{"$"+extractBills(formData.data).reduce((s,p)=>s+Number(p),0)+"/"+formData.data?.plan?.type?.slice(0,-2)}</span>
 		         </div>
 		     
 		 </main>
-		</div>
+		</section>
 	);
 
 }
