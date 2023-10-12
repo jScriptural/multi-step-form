@@ -16,7 +16,7 @@ export default function FormContainer(){
 
 
 	return (
-		<div id="formContainer" role="container" arial-label="form container">
+		<div id="formContainer" role="region" arial-label="form container">
 		<PersonalInfo />
 		<Plan />
 		<AddOns key={formData.data?.plan?.type} />

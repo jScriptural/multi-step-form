@@ -8,7 +8,7 @@ export default function SuccessFeedback(){
 	const step = useContext(currentFormContext);
 
 	return (
-		<div id="successFeedback" hidden={step.currentStep !==5} role="container">
+		<div id="successFeedback" hidden={step.currentStep !==5} role="region">
 		<main arial-label="main content">
 		<object type="image/svg+xml" data={thankYouIcon} arial-label="checkmark icon" role="icon"></object>
 		<h1>Thank you!</h1>
