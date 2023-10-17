@@ -5,7 +5,7 @@ export default function Container(){
 	 
 
 	return (
-		<div id="container" role="container">
+		<div id="container" role="region">
 		 <Stepper />
 		 <FormContainer />
 

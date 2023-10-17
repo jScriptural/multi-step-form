@@ -22,13 +22,13 @@ export default function PersonalInfo(){
 
 
 	return (
-		<div id="personalInfo" hidden={step.currentStep !==1}>
+		<div id="personalInfo" hidden={step.currentStep !==1} role="region">
 		 <form>
 		   <legend>Personal info </legend>
 		   <p>Please provide your name, email address and phone number.</p>
-		   <div className="name" role="container">
+		   <div className="name" role="group">
 	              <label htmlFor="inputName"><span>Name</span><span className="error-feedback" hidden={!nameError}>Name too short</span></label>
-		     <input tabIndex="1" type="text" 
+		     <input type="text" 
 		   	    id="inputName"
 		             name="name" 
 		             placeholder="e.g Stephen King" 
@@ -36,9 +36,9 @@ export default function PersonalInfo(){
 		             onChange={(e)=>personalInfo.setData(prev=>({...prev,name:e.target.value}))} 
 		               onFocus={e=>setNameError(false)}/></div>
 
-		<div className="email" role="container">
+		<div className="email" role="group">
 	             <label htmlFor="inputEmail">Email address <span className="error-feedback" hidden={!emailError}>Invalid email</span></label>
-		     <input tabIndex="2" type="email" 
+		     <input type="email" 
 		 	    id="inputEmail" 
 		             name="email" 
 		             placeholder="e.g stephenking@lorem.com" 
@@ -46,9 +46,9 @@ export default function PersonalInfo(){
 		              onChange={(e)=>personalInfo.setData(prev=>({...prev,email:e.target.value}))} 
 		              onFocus={e=>setEmailError(false)} /></div>
 
-		<div className="phone-number" role="container">
+		<div className="phone-number" role="group">
 	              <label htmlFor="inputPhoneNumber"><span>Phone Number</span><span className="error-feedback" hidden={!phoneNumberError}>Invalid input</span></label>
-		       <input tabIndex="2" type="tel" 
+		       <input  type="tel" 
 		               id="inputPhoneNumber" 
 		                name="phoneNumber" 
 		   		placeholder="e.g +1 234567890" 

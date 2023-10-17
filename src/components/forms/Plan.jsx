@@ -71,10 +71,10 @@ export default function Plan(){
 		  <main>
 		    <h1>Select your plan</h1>
 		    <p>You have the option of monthly or yearly billing.</p>
-		<div role="container" className="parent-container" onClick={handleClick} key={session}>
+		<div role="group" className="parent-container" onClick={handleClick} key={session}>
 		{plans.map((plan,i)=>(<div className={`plan ${plan.package}`} key={i}>
 			<object arial-label="icon" type="image/svg+xml" data={plan.icon}></object>
-			<div role="container"><span className="package">{plan.package}</span><span className="bill">{type==="yearly"?plan.bill.yearly: plan.bill.monthly}</span><span className="bonus" hidden={!(type==="yearly")}>{plan.bonus}</span></div>
+			<div role="group"><span className="package">{plan.package}</span><span className="bill">{type==="yearly"?plan.bill.yearly: plan.bill.monthly}</span><span className="bonus" hidden={!(type==="yearly")}>{plan.bonus}</span></div>
 			</div>
 		))}
 		</div>

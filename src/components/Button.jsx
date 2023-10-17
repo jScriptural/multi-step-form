@@ -70,7 +70,7 @@ export default function Button(){
 	}
 
 	return (
-		<div id="buttons" role="container">
+		<div id="buttons" role="region">
 		  <button arial-label="go back button"  style={{visibility: step.currentStep>1?"visible":"hidden"}} className="prev-btn" onClick={handleClick}>Go Back</button>
 		<button arial-label="next button" className={step.currentStep===4?"next-btn bg-purplish-blue":"next-btn bg-marine-blue"} onClick={handleClick}>{step.currentStep===4?"Confirm":"Next step"}</button>
 		</div>

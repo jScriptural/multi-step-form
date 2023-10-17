@@ -6,7 +6,6 @@ const steps = ["YOUR INFO","SELECT PLAN","ADD-ONS","SUMMARY"];
 export default function Stepper(){
 	const step = useContext(currentFormContext);
 	let currentStep = step.currentStep-1<3?step.currentStep-1:3;
-	//if(n>3)n=3;
 	return (
 		<section id="stepperSection">
 		  <ul>

@@ -70,9 +70,9 @@ export default function AddOns(){
 		   <legend>Pick add-ons</legend>
 		   <p>Add-ons help enhance your gaming experience.</p>
 		{addOns.map((addOn,i)=>(
-		    <div role="container" key={i} className={`add-on ${addOn.package}`} data-id={"addOn"+i} onClick={handleClick}>
+		    <div role="group" key={i} className={`add-on ${addOn.package}`} data-id={"addOn"+i} onClick={handleClick}>
 			<input type="checkbox" name="addOns"  />
-			<div role="container"><span className="package">{addOn.package}</span><span className="description">{addOn.description}</span></div>
+			<div role="group"><span className="package">{addOn.package}</span><span className="description">{addOn.description}</span></div>
 			<span className="bill">{formData.data.plan?.type=="yearly"?addOn.bill.yearly:addOn.bill.monthly}</span>
 		</div>
 		))}   
